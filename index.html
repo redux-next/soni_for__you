@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be Mine?</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #FF9A8B;
+            background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+            padding: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 30px;
+            color: white;
+            background-image: linear-gradient(to right, #ee0979 0%, #ff6a00  51%, #ee0979  100%)
+        }
+
+        button:hover {
+
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+        }
+
+
+        #message {
+            display: none;
+            margin-top: 20px;
+        }
+
+        #image-section {
+            display: none;
+            margin-top: 20px;
+        }
+
+        #image-section img {
+            width: 250px;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="msg">
+            <img src="./assets/soni.jpeg" style="
+        width: 200px; /* Adjust the size */
+        height: 200px; /* Make it equal to width for a perfect circle */
+        border-radius: 50%; /* Make it round */
+        object-fit: cover; /* Ensures the image scales without distortion */
+        border: 2px solid #ff5e57; /* Optional: Add a border */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+        " alt="my love">
+            <h1>Hey Crush!</h1>
+            <p>Will you be the one to complete my code?</p>
+            <button onclick="showMessage();">Yes</button>
+            <button onclick="showMessage();">Absolutely!</button>
+        </div>
+
+    </div>
+
+    <div id="message">
+        <img src="./assets/soni1.jpeg" alt="loml" style="
+        width: 100px; /* Adjust the size */
+        height: 100px; /* Make it equal to width for a perfect circle */
+        border-radius: 50%; /* Make it round */
+        object-fit: cover; /* Ensures the image scales without distortion */
+        border: 2px solid #ff5e57; /* Optional: Add a border */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+        ">
+        <h2>Thank you for being you ❤️</h2>
+        <p>I can't wait to know more about you and create something beautiful together.</p>
+    </div>
+
+    <div id="image-section">
+        <h3>Here's something special just for you:</h3>
+        <img src="https://images.unsplash.com/photo-1581547909866-8d6f8d81127d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Special for you">
+    </div>
+
+    <script>
+        function showMessage() {
+            // Hide the previous screen
+            document.getElementById('msg').style.display = 'none';
+
+            // Show the hidden message
+            document.getElementById('message').style.display = 'block';
+
+            // Show the image section
+            document.getElementById('image-section').style.display = 'block';
+
+            // Trigger confetti effect
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+    </script>
+    <footer> Made with love by SHAURYA ❤️</footer>
+</body>
+
+</html>
